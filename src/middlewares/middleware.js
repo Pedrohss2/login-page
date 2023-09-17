@@ -4,9 +4,9 @@ exports.meuMiddleware = (request, response, next) => {
 };
 
 
-exports.checkCsrfError = (erro, req, resm, next) => {
+exports.checkCsrfError = (erro, req, res, next) => {
     if(erro) {
-        return resm.render('404')
+        return res.render('404')
     }
     
     next();
