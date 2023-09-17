@@ -5,9 +5,11 @@ exports.meuMiddleware = (request, response, next) => {
 
 
 exports.checkCsrfError = (erro, req, resm, next) => {
-    if(erro &&  'EBADCSRFTOKEN' === erro.code) {
+    if(erro) {
         return resm.render('404')
     }
+    
+    next();
 }
 
 exports.csrfMiddleware = (req, res, next) => {
