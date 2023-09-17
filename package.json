@@ -1,19 +1,38 @@
 {
-  "name": "aula9",
+  "name": "aula12",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js --ignore public --ignore frontend",
+    "dev": "webpack -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.0.0",
+    "core-js": "^3.24.1",
+    "css-loader": "^6.7.1",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.5.1",
+    "regenerator-runtime": "^0.13.9",
+    "style-loader": "^3.3.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "nodemon": "^2.0.19",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }
