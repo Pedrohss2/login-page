@@ -35,19 +35,14 @@ body {
     margin-bottom: 15px;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 table {
     max-width: 100px;
 }
-table tr{
+table tr {
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    border-top: 2px solid #ccc;
+    border-top: 2px solid #131313;
     width: 600px;
 }
 table tr td {
