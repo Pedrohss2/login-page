@@ -4,7 +4,7 @@ const Login = require('../models/loginModel');
 exports.index = (request, response) => {
     response.render('login')
 }
- 
+
 exports.register = async function(request, response) {
     try {
         const login = new Login(request.body);
@@ -14,7 +14,7 @@ exports.register = async function(request, response) {
         if(login.erros.length > 0) {
             request.flash('errors', login.erros)
             request.session.save(function() {
-                return response.redirect('/login/index')
+                return response.redirect('/cadastrar/index')
             });
             return;
         }
@@ -22,7 +22,7 @@ exports.register = async function(request, response) {
 
         request.flash('success', 'Usuário criado com sucesso')
         request.session.save(function() {
-            return response.redirect('/login/index')
+            return response.redirect('/cadastrar/index')
         });
 
     } catch(error) {
@@ -31,6 +31,6 @@ exports.register = async function(request, response) {
     }
 }
 
-exports.register = (request, response) => {
+exports.cadastrar = (request, response) => {
     response.render('register');
 }

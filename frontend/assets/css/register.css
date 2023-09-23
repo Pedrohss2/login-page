@@ -1,0 +1,29 @@
+body {
+    background-color: #ccc;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    background-color: rgba(245, 245, 245, 0.432);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
+}
+
+label {
+    display: block;
+}
+input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
