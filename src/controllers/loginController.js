@@ -1,3 +1,4 @@
+const { response } = require('express');
 const Login = require('../models/loginModel');
 
 exports.index = (request, response) => {
@@ -28,4 +29,8 @@ exports.register = async function(request, response) {
         console.log(error)
         return response.render('404')
     }
+}
+
+exports.register = (request, response) => {
+    response.render('register');
 }
