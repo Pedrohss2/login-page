@@ -44,9 +44,9 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
-app.use(csurf())
-app.use (meuMiddleware);
-app.use (checkCsrfError);
+app.use(csurf());
+app.use(meuMiddleware);
+app.use(checkCsrfError);
 app.use(csrfMiddleware)
 app.use(routes);
 
