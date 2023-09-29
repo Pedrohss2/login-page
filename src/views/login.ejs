@@ -5,9 +5,12 @@
 <section class="container">
     <div class="col-lg">
         <h2>Faça seu login</h2> 
+        <%- include('includes/messages');%>
 
-        <form action="/login/login" method="POST">
+        
+        <form action="/login/login" method="POST" class="form form-login">
             <input type="hidden" name="_csrf" value=<% csrfToken %>>
+
             <div class="form-group">
                 <label for="email-address">Email address</label>
                 <input type="email" placeholder="Write your email address here" name="email" id="email-address">
@@ -17,7 +20,9 @@
                 <label for="password">Password</label>
                 <input type="password" placeholder="Write your password  here" name="password" id="password">
             </div>
-
+            <div>
+                <p>Don't have account? <a href="/cadastrar/index">Create here</a></p>
+            </div>
             <button type="submit" class="btn btn-primary">To enter</button>
 
         </form>

@@ -6,7 +6,7 @@
     <div class="col-lg">
         <%- include('includes/messages');%>
     
-        <form action="/login/register" method="POST" class="form">
+        <form action="/login/register" method="POST" class="form form-register">
             <input type="hidden" name="_csrf" value=<% csrfToken %>>
             <div class="form-group">
                 <label for="email-address">Email address</label>

@@ -3,9 +3,20 @@
     <nav>
         <div class="items">
             <ul>
-                <li><a href="/login/index">Login</a></li>
-                <li><a href="/cadastrar/index">Cadastar</a></li>
-                <li><a href="">Sair</a></li>
+                <li>
+                    <a href="/contato/index">Cadastar Contato</a>
+                </li>
+
+                <% if(user) { %>
+                    <li><a href="/login/logout">Sair</a></li>
+                <% } else {%>
+                    <li>
+                        <a href="/login/index">Login</a>
+                    </li>
+                    <li>
+                        <a href="/cadastrar/index">Cadastar</a>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </nav>

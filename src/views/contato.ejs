@@ -1,0 +1,33 @@
+<%- include('includes/head')%>
+<%- include('includes/nav')%>
+ 
+
+<section class="container">
+        <div class="row">
+            <%- include('includes/messages')%>
+
+            <% if(contato._id){%>
+                <form action="/contato/edit/<%= contato._id %>" method="post">
+            <% } else {%>
+                <form action="/contato/register" method="post">
+            <% }%>                
+                <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                <label for="nome">Nome:</label>
+                <input type="text" value="<%= contato.nome %>" name="nome" placeholder="Digite seu nome aqui" id="nome">
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" value="<%= contato.sobrenome %>"  name="sobrenome" placeholder="Digite seu sobrenome aqui" id="sobrenome">
+
+                <label for="email">E-mail</label>
+                <input type="email" value="<%= contato.email %>"  name="email" id="email">
+
+                <label for="telefone">Numero</label>
+                <input type="tel" value="<%= contato.telefone %>"  name="telefone" id="numero">
+
+                <button type="submit" class="button-salvar">Salvar</button>
+            </form>
+        </div>  
+</section>
+
+<%- include('includes/footer')%>
+
